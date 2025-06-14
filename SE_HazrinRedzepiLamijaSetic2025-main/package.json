@@ -1,0 +1,20 @@
+{
+  "name": "WebProject_HazrinRedzepi2025-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^137.0.3",
+    "selenium-webdriver": "^4.33.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Wishlist App</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/static/logo.ico" />
+        <!-- Bootstrap icons-->
+        <link href="assets/css/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap) -->
+        <link href="assets/css/styles.css" rel="stylesheet" />
+        <!-- Spapp CSS -->
+        <link rel="stylesheet" href="assets/css/spapp.css"/>
+        <!-- DataTable CSS (not needed here, but kept for consistency) -->
+        <link rel="stylesheet" href="assets/css/datatables.min.css"/>
+        <!-- Toastr CSS -->
+        <link href="assets/css/toastr.min.css" rel="stylesheet" />
+       <style>html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex: 1;
+      }
+      body {
+        background: linear-gradient(90deg, #f8fafc 0%, #e7e9fc 100%);
+      }
+      .card {
+        border-radius: 1.5rem;
+      }
+      .btn-primary, .btn-success {
+        background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+        border: none;
+      }
+      .btn-primary:hover, .btn-success:hover {
+        background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+      }
+      .form-floating > label {
+        color: #4e54c8;
+        font-weight: 500;
+      }</style>
+    </head>
+    <body>
+<section class="container d-flex align-items-center justify-content-center min-vh-100" style="background: linear-gradient(90deg, #f8fafc 0%, #e7e9fc 100%);">
+  <div class="card shadow-lg border-0 p-4" style="max-width: 420px; width:100%; border-radius:1.5rem;">
+    <div class="card-body">
+      <div class="text-center mb-4">
+        <i class="bi bi-person-plus display-3 text-success"></i>
+        <h2 class="fw-bold mb-2" style="color:#4e54c8;">Create an Account</h2>
+        <p class="text-muted">Join and start organizing your wishes!</p>
+      </div>
+                <form id="register-form" action="#" method="POST" novalidate>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" name="name" placeholder="Enter your first name" required minlength="2" maxlength="30" autocomplete="given-name">
+                        <label for="name">First Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="surname" type="text" name="surname" placeholder="Enter your last name" required minlength="2" maxlength="30" autocomplete="family-name">
+                        <label for="surname">Last Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="age" type="number" name="age" placeholder="Enter your age" required min="18" max="100">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="password" type="password" name="password" placeholder="Enter your password" required minlength="6" maxlength="50" autocomplete="new-password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="submit">Register</button>
+                    </div>
+                </form>
+                <p class="text-center mt-3">Already have an account? <a href="login.html">Login here</a></p>
+            </section>
+        </div>
+    </div>
+</section>
+<!-- JQuery -->
+<script src="assets/js/jquery-3.7.1.js"></script>
+<!-- jQuery Validate -->
+<script src="assets/js/jquery.validate.min.js"></script>
+<!-- Bootstrap core JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Toastr JS -->
+<script src="assets/js/toastr.min.js"></script>
+<!-- Utils and UserService -->
+<script src="utils/constants.js"></script>
+<script src="services/user-service.js"></script>
+<script>
+  UserService.init();
+</script>
+        <script type="text/javascript">
+            UserService.init();
+        </script>
+    </body>
+</html>

@@ -12,7 +12,7 @@ MySQL database for data storage
 
 Frontend (HTML, CSS, JavaScript) for user interaction
 
-Node modules only for project tooling (not the backend runtime)
+Node modules for project tooling
 
 Features
 
@@ -34,7 +34,7 @@ Frontend: HTML, CSS, JavaScript
 
 Tools: Postman, Composer, GitHub
 
-📂 Structure
+Structure
 backend/       → PHP API (routes, services, DAO)
 frontend/      → HTML/CSS/JS UI
 test/          → test files 
